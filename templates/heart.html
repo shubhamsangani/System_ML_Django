@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+
+{% block title %}Heart{% endblock title %}
+
+{% block style %}
+
+<link rel="stylesheet" type="text/css" href="/static/CSS/dashboard.css">
+<link rel="stylesheet" type="text/css" href="/static/CSS/form.css">
+<!-- Boxicons CSS -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock style %}
+
+{% block body %}
+
+<div class="sidebar">
+    <div class="logo-details">
+        <i class='bx bxs-dashboard'></i>
+        <span class="logo_name"><a href="/" style="text-decoration: none; color: #363451;">DP System</a></span>
+    </div>
+    <ul class="nav-links">
+        <li>
+            <a href="/diabetes">
+                <i class="fa-solid fa-virus"></i>
+                <span class="link_name">Diabetes</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a href="#" class="link_name">Analytics</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/heart">
+                <i class='bx bxs-heart'></i>
+                <span class="link_name" onclick="showForm('heart')">Heart</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a href="#" class="link_name">Analytics</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/parkinsons">
+                <i class="fa-solid fa-virus"></i>
+                <span class="link_name">Parkinsons</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a href="#" class="link_name">Analytics</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="maincontent">
+    <section class="home-section">
+        <!-- Disease form goes here -->
+        <section class="Diabetes1">
+            <!-- <h1>Eye Checkup</h1> -->
+            <div class="form-container"
+                style="margin-top: 10px; background: white; height: auto; border-radius: 5px;">
+                <div class="container1">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; text-align: center; padding: 14px 0px 0px 0px;">
+                        <h1 style="font-weight: 600; font-family: serif; color: #11101d;">Heart Prediction</h1>
+                    </div>
+                    <form action="#" method="post">
+                        <div class="form first">
+                            <div class="details ID">
+                                <div class="fields">
+                                    <div class="input-field">
+                                        <label>Age</label>
+                                        <input type="text" placeholder="Enter Your Age" name="fullname" required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Sex</label>
+                                        <input type="text" placeholder="Enter Sex" name="fathername" required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Chest Pain types</label>
+                                        <input type="text" placeholder="Enter Chest Pain types" name="mothername"
+                                            required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Resting Blood Pressure</label>
+                                        <input type="text" placeholder="Enter Resting Blood Pressure" name="section"
+                                            required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Serum Cholestoral in mg/dl</label>
+                                        <input type="number" placeholder="Enter Serum Cholestoral e.g:- mg/dl"
+                                            name="gmobile" required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Fasting Blood Sugar > 120mg/dl</label>
+                                        <input type="text" placeholder="Enter Blood Sugar > 120mg/dl" name="aadhar"
+                                            required>
+                                    </div>
+                                    <div class="input-field">
+                                        <label>Resting Electrocardiographic results</label>
+                                        <input type="text" placeholder="Enter Electrocardiographic results"
+                                            name="accountnumber" required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Maximum Heart Rate achived</label>
+                                        <input type="text" placeholder="Enter Maximum Heart Rate" name="bankname"
+                                            required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Exercise Induced Angina</label>
+                                        <input type="text" placeholder="Enter Exercise Induced Angina"
+                                            name="bankhname" required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>ST depression induced by exercise</label>
+                                        <input type="text" placeholder="Enter ST depression induced" name="dob"
+                                            required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Slope of the peak exercise ST segment</label>
+                                        <input type="text" placeholder="Enter Slope of the peak exercise ST segment"
+                                            name="dob" required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Major vessels colored by flourosopy</label>
+                                        <input type="text" placeholder="Enter Major vessels colored by flourosopy"
+                                            name="dob" required>
+                                    </div>
+                                    <div class="input-field">
+                                        <label>Reversable defect</label>
+                                        <input type="text" placeholder="Enter Reversable defect" name="dob"
+                                            required>
+                                    </div>
+                                </div>
+
+                                <button type="submit" value="#">Submit
+                                    <!-- <span class="btnText">Add Student</span> -->
+                                    <i class="uil uil-navigator"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>
+
+<script type="text/javascript" src="/static/js/myscript.js"></script>
+
+{% endblock body %}

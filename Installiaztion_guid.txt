@@ -1,0 +1,32 @@
+Prerequest things:- 
+
+1.) Python (latest version recomend)
+2.) Django
+3.) IDE (As per user chooise)
+
+Some Step's for Setup project's
+
+Step - 1 :- Install python if not present in system. But install python through "windows powershell"
+    Command is - pip install python
+
+Step - 2 :- Install Django through "windows powershell"
+    Command is - pip install Django
+
+                OR 
+    
+    If allready install then 
+        Command is - pip install Django --upgrade
+
+Step - 3 :- Then open folder in VS Code and install extension e.g:- Django(Baptiste Darthenay) & Python
+
+Step - 4 :- Now make a project using Django
+    Command is - django-admin startproject (give our project name (Hello))
+
+Step - 5 :- After make a project then close the vs code completely and open folder where we
+            have creat a project and open that folder and then open with VS Code.
+
+Step - 6 :- Then make a app in current folder e.g:- Hello
+    Command is - python manage.py startapp (give our project name (demo))
+
+Step - 7 :- Now Finally run the app using
+    Command is - python manage.py runserver

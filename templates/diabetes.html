@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% block title %}Diabetes{% endblock title %}
+
+
+{% block style %}
+
+<link rel="stylesheet" type="text/css" href="/static/CSS/dashboard.css">
+<link rel="stylesheet" type="text/css" href="/static/CSS/form.css">
+<!-- Boxicons CSS -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+{% endblock style %}
+{% block body %}
+<div class="sidebar">
+    <div class="logo-details">
+        <i class='bx bxs-dashboard'></i>
+        <span class="logo_name"><a href="/" style="text-decoration: none; color: #363451;">DP System</a></span>
+    </div>
+    <ul class="nav-links">
+        <li>
+            <a href="/diabetes">
+                <i class="fa-solid fa-virus"></i>
+                <span class="link_name">Diabetes</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a href="#" class="link_name">Analytics</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/heart">
+                <i class='bx bxs-heart'></i>
+                <span class="link_name" onclick="showForm('heart')">Heart</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a href="#" class="link_name">Analytics</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/parkinsons">
+                <i class="fa-solid fa-virus"></i>
+                <span class="link_name">Parkinsons</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a href="#" class="link_name">Analytics</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="maincontent">
+    <section class="home-section">
+        <!-- Disease form goes here -->
+        <section class="Diabetes1">
+            <!-- <h1>Eye Checkup</h1> -->
+            <div class="form-container"
+                style="margin-top: 10px; background: white; height: 425px; border-radius: 5px;">
+                <div class="container1">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; text-align: center; padding: 14px 0px 0px 0px;">
+                        <h1 style="font-weight: 600; font-family: serif; color: #11101d;">Diabetes Prediction</h1>
+                    </div>
+
+                    <form action="" method="post">
+                        <div class="form first">
+                            <div class="details ID">
+                                <div class="fields">
+                                    <div class="input-field">
+                                        <label for="numberPregnancies">Number of Pregnancies</label>
+                                        <input type="text" placeholder="Enter No. of Pregnancies" name="nop"
+                                            required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label for="glucoselevel">Glucose Level</label>
+                                        <input type="text" placeholder="Enter Glucose Level" name="gl" required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label for="bloodpressure">Blood Pressure value</label>
+                                        <input type="text" placeholder="Enter Blood Pressure value" name="bpv"
+                                            required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label for="skinthickness">Skin Thickness value</label>
+                                        <input type="text" placeholder="Enter Skin Thickness value" name="stv"
+                                            required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label for="ageperson">Age of the Person</label>
+                                        <input type="text" placeholder="Enter Person Age" name="ap" required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label for="insulinelevel">Insuline Level</label>
+                                        <input type="text" placeholder="Enter Insuline Level" name="il" required>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="bmivalue">BMI value</label>
+                                        <input type="text" placeholder="Enter BMI value" name="bmi" required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label for="diabetespedigree">Diabetes Pedigree Function value</label>
+                                        <input type="text" placeholder="Enter Diabetes Pedigree value" name="dp"
+                                            required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label for="ageofperson">Age of the Person</label>
+                                        <input type="text" placeholder="Enter Person age" name="aop" required>
+                                    </div>
+                                    <button type="submit" value="calculate">Submit
+                                        <!-- <span class="btnText">Add Student</span> -->
+                                        <i class="uil uil-navigator"></i>
+                                    </button>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>
+
+<script type="text/javascript" src="/static/js/myscript.js"></script>
+{% endblock body %}
